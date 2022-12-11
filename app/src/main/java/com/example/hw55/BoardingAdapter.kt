@@ -26,7 +26,7 @@ class BoardingAdapter(val names:ArrayList<OnBoard>, private val onClick:() -> Un
 
                 tvTitle.text = item.title
                 tvDescription.text = item.desc
-                item.img?.let { ivBoard.setImageResource(it) }
+                item.img?.let { ivBoard.setAnimation(it) }
 
 
                 btnStart.isVisible = adapterPosition == names.lastIndex

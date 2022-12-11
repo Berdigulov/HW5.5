@@ -27,6 +27,7 @@ class BoardingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        pref = Pref(requireContext())
         isShowed()
         loadBoard()
         val adapter = BoardingAdapter(titles, this::onClick)
@@ -36,13 +37,13 @@ class BoardingFragment : Fragment() {
 
     private fun loadBoard(){
         titles.add(OnBoard("Have a good time","You should the time to help those \nwho need you",
-            R.drawable.ic_first))
+            R.raw.anim_dog))
         titles.add(OnBoard("Cherishing Love","It is now no longer possible for \nyou to cherish love",
-            R.drawable.ic_second))
+            R.raw.anim_pigeon))
         titles.add(OnBoard("Have a breakup?","We have made the correction for you \ndon't worry \nMaybe someone is waiting for you",
-            R.drawable.ic_third))
+            R.raw.anim_panda))
         titles.add(OnBoard("True Love","Have fun with us",
-            R.drawable.ic_fourth))
+            R.raw.anim_cat))
     }
 
     private fun onClick(){
